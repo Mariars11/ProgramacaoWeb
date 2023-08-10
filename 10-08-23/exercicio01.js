@@ -12,3 +12,5 @@ console.log("Resultado da multiplicação entre " + numA + " e " + numB + " é "
 
 let divisao = numA / numB;
 console.log("Resultado da divisão entre " + numA + " e " + numB + " é " + divisao);
+
+console.log(`Resultado da divisão entre ${numA} e ${numB} é ${divisao}`);
