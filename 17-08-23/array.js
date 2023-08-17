@@ -54,3 +54,9 @@ let objetos = [
 ]
 
 console.log(objetos);
+
+console.table(objetos);
+console.table(Object.keys(objetos));
+console.table(Object.values(objetos));
+
+
