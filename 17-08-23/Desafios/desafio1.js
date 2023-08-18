@@ -17,6 +17,6 @@ let transposta = []; // inicializa o array para a matriz transposta
             transposta[i][j] = matriz[j][i];
         }
     }
-
+    //Impressão das matrizes
     console.table(matriz);
     console.table(transposta);
