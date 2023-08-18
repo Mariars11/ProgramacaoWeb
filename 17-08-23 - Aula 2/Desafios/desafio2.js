@@ -35,16 +35,19 @@ if(colunasA == linhasB){
         matrizC[i] = [];
     }
     //console.log("multiplicações");
-    let soma = Number(); //inicializa soma
+    let soma = String(); //inicializa soma
     
     for(let i = 0; i < matrizA.length; i++){ //linhas de A
         for(let j = 0; j < colunasA; j++){ //Colunas de A
             //console.log(`${matrizA[i][j]} * ${matrizB[j][i]} = ${matrizA[i][j] * matrizB[j][i]}`);
-            soma += matrizA[i][j] * matrizB[j][i];
+            if(j != (colunasA - 1))
+                soma += `${matrizA[i][j]} * ${matrizB[j][i]} + `;
+            else
+                soma += `${matrizA[i][j]} * ${matrizB[j][i]}`;
         }
         //console.log(soma);
         matrizC[i] = soma;
-        soma = 0; //limpa a soma para a proxima iteração
+        soma = ""; //limpa a soma para a proxima iteração
     }
     //console.log("Matriz B")
     
