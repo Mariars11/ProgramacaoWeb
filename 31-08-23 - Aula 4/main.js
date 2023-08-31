@@ -1,3 +1,4 @@
+const prompt = require("prompt-sync")()
  //default parameters
  function somar(a = 10, b = 5){
     return a + b;
@@ -45,7 +46,7 @@ const pessoas = [
     {
         nome: "Maria Clara",
         sobrenome: "Silva",
-        data: new Date(2023,14, 05)
+        data: new Date(2023,14, 5)
     },
     {
         nome: "Antonia",
@@ -59,3 +60,5 @@ pessoas.forEach((pessoa) => {
     console.log(`Sobrenome: ${pessoa.sobrenome}`)
     console.log(`Data: ${pessoa.data.toLocaleString("pt-br")}`)
 });
+var input = prompt();
+console.log(input);
