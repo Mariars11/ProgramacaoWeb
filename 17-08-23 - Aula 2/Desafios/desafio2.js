@@ -44,6 +44,7 @@ if(colunasA == linhasB){
                 soma += `${matrizA[i][j]} * ${matrizB[j][i]} + `;
             else
                 soma += `${matrizA[i][j]} * ${matrizB[j][i]}`;
+            //(j < (colunasA - 1) ? " + " : ""); -> if e else if numa linha só
         }
         //console.log(soma);
         matrizC[i] = soma;
