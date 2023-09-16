@@ -1,26 +1,35 @@
-/*
-    Fazendo o uso de função construtora e callback, crie um 
-    programa para incluir notas, calcular a média e informar se um 
-    aluno foi APROVADO ou REPROVADO.
-    Não é necessário utilizar o prompt, mas querendo se desafiar 
-    nestes sentido mandem ver.
-*/
+//Classe construtora
 class Aluno {
+    
     constructor(Notas = Array()){
         this.Notas = Notas;
     }
-    calcularMedia(Notas = Array()){
+    
+    calcularMedia(){
         let media = Number();
-        let soma = Number(0);
-        for(let i = 0; i < Notas.length; i++){
-            soma += Notas[i];
+        let soma = Number();
+        for(let i = 0; i < this.Notas.length; i++){
+            soma += this.Notas[i];
         }
 
-        media = soma / Notas.length;
+        media = soma / this.Notas.length;
 
         return media;
     }
 }
 
-let aluno1 = new Aluno([7.5, 8.5, 9.5, 7])
-aluno1.calcularMedia([7.5, 8.5, 9.5, 7]);
+let aluno1 = new Aluno([7.5, 8.5, 9.5, 7]); //Notas
+
+function callback(calcularMedia) {
+    let media = Number();
+    media = calcularMedia();
+
+    if(media >= 7){
+        console.log("Aprovado!");
+    }
+    else{
+        console.log("Reprovado!");
+    }
+}
+
+callback(() => aluno1.calcularMedia()); //Recebe a media e informa se o aluno foi aprovado ou nao
