@@ -9,5 +9,10 @@
 * Construção de servidores web
 > npm init
 * aplicação faz uso de pacotes
-> npm install express 
+> npm install express
+- usado para inicializar a aplicação
+> npm install express@4.18.2 
+
+> npm install mustache-express@1.3.2
+- renderizador de paginas htmls
 
