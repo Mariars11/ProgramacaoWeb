@@ -16,8 +16,9 @@
 > npm install mustache-express@1.3.2
 - renderizador de paginas htmls
 
-> Mustache Sintaxe
-- {{}} para apresentar dados
-- '#' se existe a variavel 
-- '^' se a variavel nao existe
+# Mustache 
+* Sintaxe
+    - {{}} para apresentar dados
+    - '#' se existe a variavel 
+    - '^' se a variavel nao existe
 
