@@ -9,11 +9,13 @@
 </head>
 <body>
     <div class="div-dados">
-        {{#erro_form}}
+        <!-- Valida se erro_form existe, não necessita ser um bool -->
+        {{#erro_form}} 
         <div class="alert alert-danger" role="alert">
             Informe todos os campos!
         </div>
         {{/erro_form}}
+        <!-- Caso o erro_form não exista, entra aqui -->
         {{^erro_form}}
         <h1>Dados do Formulario</h1>
         <p class="p-label">Nome</p>
