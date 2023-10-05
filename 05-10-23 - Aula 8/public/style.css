@@ -1,0 +1,21 @@
+.formulario{
+    height:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
+
+body{
+    background-color: yellowgreen;
+}
+
+label{
+    font-weight: bolder;
+}
+
+.btns-form{
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+}

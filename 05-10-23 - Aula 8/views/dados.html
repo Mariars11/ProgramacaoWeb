@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link  rel="stylesheet" href="dados.css" type="text/css">
+    <title>Dados</title>
+</head>
+<body>
+    <div class="div-dados">
+        {{#erro_form}}
+        <div class="alert alert-danger" role="alert">
+            Informe todos os campos!
+        </div>
+        {{/erro_form}}
+        {{^erro_form}}
+        <h1>Dados do Formulario</h1>
+        <p class="p-label">Nome</p>
+        <p class="p-dados">{{dados.nome}}</p>
+        <p class="p-label">Endereço</p>
+        <p class="p-dados">{{dados.endereco}}</p>
+        <p class="p-label">Telefone</p>
+        <p class="p-dados">{{dados.telefone}}</p>
+        <p class="p-label">Data Agendamento</p>
+        <p class="p-dados">{{dados.data }}</p>
+        {{/erro_form}}
+    </div>
+</body>
+</html>
