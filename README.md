@@ -7,14 +7,13 @@
 
 # Express.js
 * Construção de servidores web
-> npm init
 * aplicação faz uso de pacotes
-> npm install express
+> npm init
 - usado para inicializar a aplicação
+> npm install express
 > npm install express@4.18.2 
-
-> npm install mustache-express@1.3.2
 - renderizador de paginas htmls
+> npm install mustache-express@1.3.2
 
 # Mustache 
 * Sintaxe
