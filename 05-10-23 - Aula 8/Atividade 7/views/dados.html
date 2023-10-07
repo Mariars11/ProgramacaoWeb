@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link  rel="stylesheet" href="dados.css" type="text/css">
+    <title>Dados</title>
+</head>
+<body>
+    <div class="div-dados">
+        <!-- Valida se erro_form existe, não necessita ser um bool -->
+        {{#erro_form}} 
+        <div class="alert alert-danger" role="alert">
+            O(s) campo(s) {{campoVazio}} está/estão vazio(s)!
+        </div>
+        {{/erro_form}}
+        <!-- Caso o erro_form não exista, entra aqui -->
+        {{^erro_form}}
+        <h1>Dados do Formulario</h1>
+        <h3>Dados pessoais</h3>
+        <p class="p-label">Nome Completo</p>
+        <p class="p-dados">{{dados.nome}}</p>
+        <p class="p-label">CPF</p>
+        <p class="p-dados">{{dados.cpf}}</p>
+        <p class="p-label">Telefone</p>
+        <p class="p-dados">{{dados.telefone}}</p>
+        <p class="p-label">Data Nascimento</p>
+        <p class="p-dados">{{dados.dataNasc}}</p>
+        <p class="p-label">Endereço</p>
+        <p class="p-dados">{{dados.endereco}}</p>
+        <p class="p-label">UF</p>
+        <p class="p-dados">{{dados.uf}}</p>
+        <p class="p-label">CEP</p>
+        <p class="p-dados">{{dados.cep}}</p>
+        <p class="p-label">E-mail</p>
+        <p class="p-dados">{{dados.email}}</p>
+        <h3>Dados consulta</h3>
+        <p class="p-label">Especialidade</p> 
+        <p class="p-dados">{{dados.especialidade}}</p>
+        <p class="p-label">Medicamentos Alergicos</p>
+        <p class="p-dados">{{dados.medAlerg}}</p>
+        <p class="p-label">Data Atendimento</p>
+        <p class="p-dados">{{dados.dataAtendimento}}</p>
+        
+        {{/erro_form}}
+    </div>
+</body>
+</html>
