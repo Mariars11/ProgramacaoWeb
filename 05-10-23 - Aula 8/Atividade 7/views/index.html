@@ -30,73 +30,107 @@
     3 – Se for enviado algum campo vazio, a aplicação deve apresentar 
         uma mensagem de erro informando o nome do campo.-->
     <div class="formulario"> 
-        <form method="post" action="dados">
-            <fieldset>
-                <legend>Dados Pessoais</legend>
-                <div class="form-group">
-                    <label>Nome Completo:</label>
-                    <input type="text" placeholder="Informe o nome" class="form-control" name="nome" >
+        <form class="forms" method="post" action="dados">
+            <div class="forms-sections">
+                <div>
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
+                        <div class="form-group">
+                            <label>Nome Completo:</label>
+                            <input type="text" placeholder="Informe o nome" class="form-control" name="nome" >
+                        </div>
+                        <div class="form-group">
+                            <label>CPF:</label>
+                            <input type="text" placeholder="Informe o CPF" class="form-control" name="cpf" >
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone:</label>
+                            <input type="text" placeholder="Informe o Telefone" class="form-control" name="telefone" >
+                        </div>
+                        <div class="form-group">
+                            <label>Data Nascimento:</label>
+                            <input type="date" class="form-control" name="dataNascimento" >
+                        </div>
+                        <div class="form-group">
+                            <label>Endereço:</label>
+                            <input type="text" placeholder="Informe o Endereço" class="form-control" name="endereco" >
+                        </div>
+                        <div class="form-group">
+                            <label>UF:</label> <br>
+                            <select class="form-control" name="uf" >
+                                <option disabled value="">Selecione</option>
+                                <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PR">PR</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>
+                                </select>
+                        </div>
+                        <div class="form-group">
+                            <label>CEP:</label>
+                            <input type="text" placeholder="Informe o CEP" class="form-control" name="cep" >
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail:</label>
+                            <input type="email" placeholder="Informe o E-mail" class="form-control" name="email" >
+                        </div>
+                    </fieldset>
                 </div>
-                <div class="form-group">
-                    <label>CPF:</label>
-                    <input type="text" placeholder="Informe o CPF" class="form-control" name="cpf" >
+                <div>
+                    <fieldset>
+                        <legend>Dados de Consulta</legend>
+                        <div class="form-group">
+                            <label>Especialidade:</label> <br>
+                            <select name="especialidade"> 
+                                <option hidden value="">Selecione a especialidade</option> 
+                                <option value="cardiologia">Cardiologia</option>
+                                <option value="dermatologia">Dermatologia</option>
+                                <option value="pediatria">Pediatria</option>
+                                <option value="ortopedista">Ortopedista</option>
+                            </select> <br>
+                        </div>
+                        <div class="form-group">
+                            <label>Data Atendimento:</label>
+                            <input type="date" class="form-control" name="dataAtendimento" >
+                        </div>
+                        <div class="form-group">
+                            <label>Alergia à medicamento:</label> <br>
+                            <select name="medicamentoAlergia" multiple> 
+                                <option value="anti_inflamatorios">Anti-inflamatórios</option>
+                                <option value="antibioticos">Antibióticos</option>
+                                <option value="paracentamol">Paracentamol</option>
+                                <option value="dipirona">Dipirona</option>
+                            </select> <br>
+                        </div>
+                        <div class="form-group">
+                            <label>Informações adicionais:</label> 
+                            <textarea placeholder="Tem algo a mais para informar?" class="form-control" name="infAdicionais"></textarea>
+                        </div>
+                    </fieldset>
                 </div>
-                <div class="form-group">
-                    <label>Telefone:</label>
-                    <input type="text" placeholder="Informe o Telefone" class="form-control" name="telefone" >
-                </div>
-                <div class="form-group">
-                    <label>Data Nascimento:</label>
-                    <input type="date" class="form-control" name="dataNascimento" >
-                </div>
-                <div class="form-group">
-                    <label>Endereço:</label>
-                    <input type="text" placeholder="Informe o Endereço" class="form-control" name="endereco" >
-                </div>
-                <div class="form-group">
-                    <label>UF:</label>
-                    <input type="text" placeholder="Informe a UF" class="form-control" name="uf" >
-                </div>
-                <div class="form-group">
-                    <label>CEP:</label>
-                    <input type="text" placeholder="Informe o CEP" class="form-control" name="cep" >
-                </div>
-                <div class="form-group">
-                    <label>E-mail:</label>
-                    <input type="email" placeholder="Informe o E-mail" class="form-control" name="email" >
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Dados de Consulta</legend>
-                <div class="form-group">
-                    <label>Especialidade:</label> <br>
-                    <select name="especialidade"> 
-                        <option hidden value="">Selecione a especialidade</option> 
-                        <option value="cardiologia">Cardiologia</option>
-                        <option value="dermatologia">Dermatologia</option>
-                        <option value="pediatria">Pediatria</option>
-                        <option value="ortopedista">Ortopedista</option>
-                    </select> <br>
-                </div>
-                <div class="form-group">
-                    <label>Data Atendimento:</label>
-                    <input type="datetime" class="form-control" name="dataAtendimento" >
-                </div>
-                <div class="form-group">
-                    <label>Alergia à medicamneto:</label> <br>
-                    <select name="medicamentoAlergia" multiple> 
-                        <option value="anti_inflamatorios">Anti-inflamatórios</option>
-                        <option value="antibioticos">Antibióticos</option>
-                        <option value="paracentamol">Paracentamol</option>
-                        <option value="dipirona">Dipirona</option>
-                    </select> <br>
-                </div>
-                <div class="form-group">
-                    <label>Informações adicionais:</label> 
-                    <textarea placeholder="Tem algo a mais para informar?" class="form-control" name="infAdicionais"></textarea>
-                </div>
-            </fieldset>
-            
+            </div>
             <div class="btns-form">
                 <button type="reset" class="btn btn-danger">Limpar</button>
                 <button type="submit" class="btn btn-dark">Enviar</button>    

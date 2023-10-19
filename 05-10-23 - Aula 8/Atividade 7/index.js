@@ -49,7 +49,9 @@ app.post('/dados', function(req, res) {
     dados.cep = req.body.cep;
     dados.email = req.body.email;
     dados.especialidade = req.body.especialidade;
-    dados.infAdic = req.body.infAdicionais;//medicamentoAlergia, dataAtendimento
+    dados.infAdic = req.body.infAdicionais;
+    dados.medAlerg = req.body.medicamentoAlergia;
+    dados.medAlerg = req.body.dataAtendimento;
 
     res.redirect("/dados");
 });

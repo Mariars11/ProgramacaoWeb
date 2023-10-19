@@ -1,15 +1,23 @@
 .formulario{
-    height:100%px;
+    height:100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;  
 }
-
+.forms-sections{
+    display: flex;
+    gap: 25%;
+}
+fieldset{
+    width: max-content;
+}
 body{
     background-color: yellowgreen;
 }
-
+textarea{
+    max-height: 150px;
+}
 label{
     font-weight: bolder;
 }
@@ -18,4 +26,8 @@ label{
     display: flex;
     gap: 9px;
     justify-content: center;
+}
+legend{
+    color: rgb(3, 5, 92);
+    font-weight: bolder;
 }
